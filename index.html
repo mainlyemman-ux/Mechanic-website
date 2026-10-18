@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torque &amp; Co Auto Care | Car Repair in Accra</title>
+  <meta name="description" content="Sample auto repair website for a fictional garage in Accra. Servicing, brakes, engine diagnostics and breakdown help via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Torque & Co Auto Care",
+    "description": "Sample car repair garage in Accra (fictional, for portfolio use).",
+    "telephone": "+233200000000",
+    "address": { "@type": "PostalAddress", "addressLocality": "Accra", "addressCountry": "GH" }
+  }
+  </script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span data-bind="hoursShort"></span>
+      <a data-tel data-bind="phoneDisplay"></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" data-bind="name"></a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#team">Team</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="btn btn-orange btn-small" data-wa>Book a service</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="kicker" data-bind="heroKicker"></p>
+        <h1 data-bind="headline"></h1>
+        <p class="lead" data-bind="subtext"></p>
+        <div class="hero-actions">
+          <a class="btn btn-orange" data-wa>Book a service</a>
+          <a class="btn btn-outline" data-tel>Emergency call</a>
+        </div>
+        <ul class="hero-badges" id="badges"></ul>
+      </div>
+      <div class="hero-stripe" aria-hidden="true"></div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid" id="stats-items"></div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="kicker dark">What we fix</p>
+        <h2 class="section-title" data-bind="servicesTitle"></h2>
+        <div class="service-grid" id="service-items"></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="packages">
+      <div class="container">
+        <p class="kicker dark">Service packages</p>
+        <h2 class="section-title" data-bind="packagesTitle"></h2>
+        <div class="package-grid" id="package-items"></div>
+        <p class="note" data-bind="packagesNote"></p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="team">
+      <div class="container team-grid">
+        <div>
+          <p class="kicker">Our technicians</p>
+          <h2 class="section-title" data-bind="teamTitle"></h2>
+          <p class="team-text" data-bind="teamText"></p>
+          <ul class="checks" id="reasons"></ul>
+        </div>
+        <div class="team-cards" id="team-items"></div>
+      </div>
+    </section>
+
+    <section class="section cta" id="visit">
+      <div class="container cta-inner">
+        <div>
+          <h2 data-bind="ctaTitle"></h2>
+          <p data-bind="ctaText"></p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-dark" data-wa>Book on WhatsApp</a>
+          <a class="btn btn-outline-dark" data-tel>Call now</a>
+        </div>
+      </div>
+      <div class="container visit-info">
+        <p><strong>Address:</strong> <span data-bind="address"></span></p>
+        <p><strong>Hours:</strong> <span data-bind="hours"></span></p>
+        <p><a class="link" data-maps target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" data-bind="footer"></div>
+  </footer>
+
+  <a class="fab-whatsapp" data-wa aria-label="Book on WhatsApp">Book a service</a>
+
+  <script src="site-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
